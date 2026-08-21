@@ -26,5 +26,15 @@
 # b = int(input())
 # print(a, b)
 # 100 200
-a = input().split()  # 공백을 기준으로 문자열을 나눠서 리스트로 반환합니다.`)
+# a = input().split()  # 공백을 기준으로 문자열을 나눠서 리스트로 반환합니다.`)
+# print(a,type(a))
+
+# map
+# map(함수, List 객체)
+
+a,b,c = map(int, input().split())  # 공백을 기준으로 문자열을 나눠서 리스트로 반환합니다.`)
+print(a,b,c)
+
+# 리스트 변환
+a = list(map(int, input().split()))  # 공백을 기준으로 문자열을 나눠서 리스트로 반환합니다.`)
 print(a,type(a))
