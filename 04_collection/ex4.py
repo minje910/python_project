@@ -123,6 +123,8 @@ scores = (90, 85, 78, 92, 88, 76)
 
 print(max(scores), min(scores))                                                    # ✅ max 점수: 92점, min 점수: 76점
 
+result = sorted(scores)
+print(f"max: {result[-1]}score, min: {result[0]}score")
 
 # 5️⃣ 과일가게 총 재고 금액 구하기
 stocks = (
@@ -138,5 +140,21 @@ print(tuple(i[1] for i in stocks))                                              
 print(tuple(i[0] for i in stocks))                                                    # ✅ (5, 3, 2)
 
 # 총 재고 금액 출력
+total = sum(price * num for name, price,num in stocks)
+total = sum([price * num for name, price,num in stocks])
+
+total = sum(price * num for _, price,num in stocks)
+total = sum([price * num for _, price,num in stocks])
+
+print(f"{total}won")
 
 print(sum(tuple(i[1]*i[2] for i in stocks)))                                                    # ✅ 총액: 21,000원
+
+stocks = (
+    ("사과", "바나나", "체리"),
+    (1000, 2000, 5000),
+    (5, 3, 2),
+)
+
+total = sum(price * sum for _,price,num in zip(*stocks))
+print(f"총액: {total:,}원")
